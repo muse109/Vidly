@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,52 +10,49 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-       
+        private ApplicationDbContext _context;
+
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
 
         // GET: Customers
         public ActionResult Index()
         {
-            var Clientes = GetCustomers();
+            var Clientes = _context.Customers.Include(c => c.MembershipType).ToList(); // GetCustomers();
 
 
             return View(Clientes);
         }
 
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
 
-            var Clientes = GetCustomers();
-            Customer Cliente = null ;
-
-            if (id != null)
-            {
-
-                Cliente = Clientes.FirstOrDefault(item => item.Id == id);
-
-
-                if (Cliente == null)
+           var customer  = _context.Customers.FirstOrDefault(item => item.Id == id);
+            
+                if (customer == null)
                     return HttpNotFound();
 
-
-            }
-            
-
-
-
-            return View(Cliente);
+            return View(customer);
         }
 
 
 
-        private IEnumerable<Customer> GetCustomers()
-        {
-            return new List<Customer>
-            {
-                new Customer {Id = 1, Name = "Santiago Valencia"},
-                new Customer {Id = 2, Name = "Johanna Jimenez"}
-            };
+        //private IEnumerable<Customer> GetCustomers()
+        //{
+        //    return new List<Customer>
+        //    {
+        //        new Customer {Id = 1, Name = "Santiago Valencia"},
+        //        new Customer {Id = 2, Name = "Johanna Jimenez"}
+        //    };
 
-        }
+        //}
 
 
     }
