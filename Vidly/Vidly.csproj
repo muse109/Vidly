@@ -228,9 +228,34 @@
     <Compile Include="Migrations\201704190226555_UpdateBirthDateCustomer.Designer.cs">
       <DependentUpon>201704190226555_UpdateBirthDateCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704191347117_fixnulldatebirthcustomer.cs" />
+    <Compile Include="Migrations\201704191347117_fixnulldatebirthcustomer.Designer.cs">
+      <DependentUpon>201704191347117_fixnulldatebirthcustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704221558099_addGenreModel.cs" />
+    <Compile Include="Migrations\201704221558099_addGenreModel.Designer.cs">
+      <DependentUpon>201704221558099_addGenreModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704221614283_PopulateGenre.cs" />
+    <Compile Include="Migrations\201704221614283_PopulateGenre.Designer.cs">
+      <DependentUpon>201704221614283_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704221634180_updatetableGenre.cs" />
+    <Compile Include="Migrations\201704221634180_updatetableGenre.Designer.cs">
+      <DependentUpon>201704221634180_updatetableGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704221635351_PopulateGenre1.cs" />
+    <Compile Include="Migrations\201704221635351_PopulateGenre1.Designer.cs">
+      <DependentUpon>201704221635351_PopulateGenre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704221651528_fixmoviesmodel.cs" />
+    <Compile Include="Migrations\201704221651528_fixmoviesmodel.Designer.cs">
+      <DependentUpon>201704221651528_fixmoviesmodel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -308,6 +333,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Movies\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -351,6 +377,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704190226555_UpdateBirthDateCustomer.resx">
       <DependentUpon>201704190226555_UpdateBirthDateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704191347117_fixnulldatebirthcustomer.resx">
+      <DependentUpon>201704191347117_fixnulldatebirthcustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704221558099_addGenreModel.resx">
+      <DependentUpon>201704221558099_addGenreModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704221614283_PopulateGenre.resx">
+      <DependentUpon>201704221614283_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704221634180_updatetableGenre.resx">
+      <DependentUpon>201704221634180_updatetableGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704221635351_PopulateGenre1.resx">
+      <DependentUpon>201704221635351_PopulateGenre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704221651528_fixmoviesmodel.resx">
+      <DependentUpon>201704221651528_fixmoviesmodel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

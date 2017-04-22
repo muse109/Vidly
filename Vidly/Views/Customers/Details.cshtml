@@ -11,9 +11,9 @@
 <ul>
     <li>Membership Type: @Model.MembershipType.Name</li>
     
-    @if (@Model.Birthdate != null)
+    @if (@Model.Birthdate.HasValue)
     {
-        <li>Datebirth: @Model.Birthdate.ToShortDateString()</li>   
+        <li>Datebirth: @Model.Birthdate.ToString()</li>   
     }
     
    
