@@ -1,4 +1,4 @@
-﻿@model  IEnumerable<Vidly.Models.Customer>
+﻿@model IEnumerable<Vidly.Models.Customer>
 
 
 @{
@@ -22,7 +22,7 @@
         {
             <tr>
                 <td>
-                    @Html.ActionLink(Customer.Name, "Details", "Customers", new {id = Customer.Id}, null)
+                    @Html.ActionLink(Customer.Name, "Edit", "Customers", new {id = Customer.Id}, null)
                 </td>
                 <td>
                     @Customer.MembershipType.Name
@@ -33,10 +33,5 @@
 }
 else
 {
-    <h2>We dont have any Customer Yet</h2> 
+    <h2>We dont have any Customer Yet</h2>
 }
-
-
-
-
-
